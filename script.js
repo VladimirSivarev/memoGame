@@ -1,3 +1,11 @@
+/*
+   TO DO: 1. Разобраться, почему скрипт не работает
+          2. Дождаться API
+          3. Связать дивы попарно
+          4. Разработать логику игры(расширяемый раздел)
+          5. Разработать ИИ
+*/
+
 (function(){
     document.addEventListener("DOMContentLoaded", () => {
         const submitUserData = document.querySelector(".submit");
