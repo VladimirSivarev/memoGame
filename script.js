@@ -7,20 +7,24 @@
 */
 
 (function(){
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", function(){
         const submitUserData = document.querySelector(".submit");
-        const field = document.querySelector(".field");
+        const field = document.createElement('div');
+        field.setAttribute('class', 'field');
+        document.body.appendChild(field);
 
         function drawField(countOfPairs, field){
             for (let i = 0; i < countOfPairs*2; i++) {
-                let card = '<div class="card" id="' + i + '"></div>'
-                field.innerHTML += card;
+                let card = document.createElement('div');
+                card.setAttribute('class', 'card');
+                card.setAttribute('id', i);
+                document.field.appendChild(card);
             }
         }
 
         submitUserData.addEventListener("click", () => {
             const userName = document.querySelector(".nickname").nodeValue;
-            const countOfPairs = document.querySelector(".choise").nodeValue;
+            const countOfPairs = Number(document.querySelector(".choise").nodeValue);
             drawField(countOfPairs, field);
         })
     })
